@@ -4,9 +4,10 @@ namespace Hito\Auth;
 
 use Hito\Auth\Providers\AppServiceProvider;
 use Hito\Auth\Providers\RouteServiceProvider;
+use Hito\Core\BaseServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
-class AuthServiceProvider extends ServiceProvider
+class AuthServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
@@ -19,18 +20,6 @@ class AuthServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'hito-auth');
         $this->loadTranslationsFrom(__DIR__.'/../lang', 'hito-auth');
 
-        $files = app('files');
-
-        var_dump('AUTH SERVICE PROVIDER [START]');
-        $publicPath = public_path(config('app.asset_path') . '/' . config('app.asset_directory_main'));
-        var_dump($publicPath);
-        $destinationPath = "{$publicPath}/auth";
-        if (!$files->isDirectory($destinationPath)) {
-            $files->ensureDirectoryExists($publicPath);
-            var_dump('DIRECTORY SHOULD EXIST');
-            $files->link(__DIR__.'/../public', $destinationPath);
-        }
-
-        var_dump('AUTH SERVICE PROVIDER [STOP]');
+        $this->registerAssetDirectory('public', 'auth');
     }
 }
