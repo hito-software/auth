@@ -1,0 +1,23 @@
+@mixin styles($parent) {
+    #{$parent}__input-group {
+        &__control {
+            @apply border rounded py-2 px-4 block w-full;
+        }
+
+        &__label {
+            @apply block font-bold mb-1;
+        }
+
+        &__error {
+            @apply text-red-500 font-bold hidden;
+        }
+
+        &--invalid &__control {
+            @apply border-red-500;
+        }
+
+        &--invalid &__error {
+            @apply block mt-2;
+        }
+    }
+}

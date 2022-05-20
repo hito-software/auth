@@ -1,0 +1,26 @@
+@mixin styles($parent) {
+    #{$parent}__main {
+        @apply flex flex-col items-center justify-center px-10 bg-white;
+
+        &__content {
+            @apply flex items-center justify-center flex-1;
+            max-width: 500px;
+        }
+
+        &__heading {
+            @apply mb-5 space-y-1;
+        }
+
+        &__title {
+            @apply text-4xl;
+        }
+
+        &__subtitle {
+
+        }
+
+        &__content {
+
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@mixin styles($parent) {
+    #{$parent}__side {
+        @apply hidden bg-black px-10;
+        @apply md:flex md:flex-col md:items-center md:justify-center;
+
+        &__content {
+            @apply flex items-center justify-center flex-1 relative z-10;
+            max-width: 600px;
+        }
+
+        &__title {
+            @apply text-4xl text-white mb-2 font-bold;
+        }
+
+        &__subtitle {
+            @apply text-white;
+        }
+
+        &__link {
+            @apply border rounded py-2 px-6 inline-block text-white mt-10;
+            @apply hover:bg-white hover:bg-opacity-25;
+        }
+
+        &__footer {
+            @apply text-white;
+        }
+    }
+}

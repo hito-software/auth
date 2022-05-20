@@ -1,0 +1,39 @@
+@use 'main';
+@use 'side';
+@use 'input-group';
+
+$rootSelector: '.hito-auth';
+
+body {
+    @apply h-screen;
+    min-width: 320px;
+}
+
+#{$rootSelector} {
+    @apply grid grid-cols-1 md:grid-cols-2 h-full;
+
+    &__submit {
+        @apply block py-3 px-6 text-center bg-blue-600 rounded text-white font-bold uppercase;
+        @apply hover:bg-blue-500;
+
+        &--full {
+            @apply w-full;
+        }
+
+        &--icon {
+            @apply flex items-center justify-center w-[2.5rem] h-[2.5rem] p-0;
+        }
+    }
+
+    &__footer {
+        @apply text-sm flex flex-col items-center text-center py-4;
+    }
+
+    a {
+        @apply text-blue-500;
+    }
+}
+
+@include main.styles($rootSelector);
+@include side.styles($rootSelector);
+@include input-group.styles($rootSelector);
