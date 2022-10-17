@@ -1,0 +1,178 @@
+body {
+  height: 100vh;
+  min-width: 320px
+}
+
+.hito-auth {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(1, minmax(0, 1fr))
+}
+
+@media (min-width: 768px) {
+
+  .hito-auth {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+}
+.hito-auth__submit {
+  display: block;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+.hito-auth__submit:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity))
+}
+.hito-auth__submit--full {
+  width: 100%
+}
+.hito-auth__submit--icon {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0px
+}
+.hito-auth__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem
+}
+.hito-auth a {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity))
+}
+
+.hito-auth__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 2.5rem;
+  padding-right: 2.5rem
+}
+.hito-auth__main__content {
+  display: flex;
+  flex: 1 1 0%;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px
+}
+.hito-auth__main__heading {
+  margin-bottom: 1.25rem
+}
+.hito-auth__main__heading > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse))
+}
+.hito-auth__main__title {
+  font-size: 2.25rem;
+  line-height: 2.5rem
+}
+.hito-auth__side {
+  display: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  padding-left: 2.5rem;
+  padding-right: 2.5rem
+}
+@media (min-width: 768px) {
+
+  .hito-auth__side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+}
+.hito-auth__side__content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex: 1 1 0%;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px
+}
+.hito-auth__side__title {
+  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+.hito-auth__side__subtitle {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+.hito-auth__side__link {
+  margin-top: 2.5rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+.hito-auth__side__link:hover {
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.25
+}
+.hito-auth__side__footer {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+.hito-auth__input-group__control {
+  display: block;
+  width: 100%;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+.hito-auth__input-group__label {
+  margin-bottom: 0.25rem;
+  display: block;
+  font-weight: 700
+}
+.hito-auth__input-group__error {
+  display: none;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity))
+}
+.hito-auth__input-group--invalid .hito-auth__input-group__control {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity))
+}
+.hito-auth__input-group--invalid .hito-auth__input-group__error {
+  margin-top: 0.5rem;
+  display: block
+}
